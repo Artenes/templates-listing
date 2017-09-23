@@ -1,0 +1,19 @@
+
+// Fonts
+//@import url("https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600");
+//@import url("https://fonts.googleapis.com/css?family=Lato:300,400,600");
+//@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bulma
+//@import "~bulma";
+
+html, body {
+
+  font-family: Quicksand, 'sans-serif';
+  background-color: #00c053;
+  font-size: 0.5em;
+
+}
