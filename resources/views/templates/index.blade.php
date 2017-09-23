@@ -21,11 +21,11 @@
                     <div class="card">
 
                         <header class="card-header">
-                            <p class="card-header-title template-name"><a href="{{ route('templates.show', $template->slug) }}" target="_blank">{{ $template->name }}</a></p>
+                            <p class="card-header-title template-name"><a href="{{ route('demos.show', $template->slug) }}" target="_blank">{{ $template->name }}</a></p>
                         </header>
 
                         <div class="card-image">
-                            <a href="{{ route('templates.show', $template->slug) }}" target="_blank">
+                            <a href="{{ route('demos.show', $template->slug) }}" target="_blank">
                                 <figure class="image is-4by3">
                                     <img src="{{ $template->thumbnail }}" alt="Image">
                                 </figure>
@@ -33,7 +33,7 @@
                         </div>
 
                         <header class="card-header">
-                                <p class="card-header-title template-title"><a href="{{ route('templates.show', $template->slug) }}" target="_blank">{{ $template->title }}</a></p>
+                                <p class="card-header-title template-title"><a href="{{ route('demos.show', $template->slug) }}" target="_blank">{{ $template->title }}</a></p>
                         </header>
 
                         <div class="other-store-price">
@@ -53,8 +53,9 @@
                         </div>
 
                         <footer class="card-footer">
-                            <a href="{{ route('templates.show', $template->slug) }}" target="_blank" class="card-footer-item">demo</a>
-                            <a href="{{ route('templates.show', $template->slug) }}" class="card-footer-item">bruy</a>
+                            <a href="{{ route('demos.show', $template->slug) }}" target="_blank" class="card-footer-item footer-item footer-item-demo">demo</a>
+                            <a href="{{ route('templates.show', $template->slug) }}" target="_blank" class="card-footer-item">info</a>
+                            <a href="{{ route('checkout.show', $template->slug) }}" class="card-footer-item footer-item footer-item-bruy">bruy it</a>
                         </footer>
 
                     </div>
