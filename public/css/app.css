@@ -1,3 +1,6 @@
+/*green: #00c053*/
+/*blue: #002776*/
+
 html, body {
 
   font-family: Quicksand, 'sans-serif';
@@ -9,13 +12,6 @@ html, body {
 .card {
 
     border-radius: 1em;
-
-}
-
-.card-image img {
-
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
 
 }
 
@@ -38,6 +34,8 @@ html, body {
 .our-price {
 
     font-size: 1.5em;
+    color: #002776;
+    font-weight: bold;
 
 }
 
@@ -49,3 +47,28 @@ html, body {
 
 }
 
+.template-title a {
+
+    color: #002776;
+
+}
+
+.for-just {
+
+    padding-right: 1em;
+    font-size: 0.5em;
+
+}
+
+.template-name {
+
+    display: inline-block;
+    text-align: center;
+
+}
+
+.template-name a, .card-footer a {
+
+    color: #002776;
+
+}
