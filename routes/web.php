@@ -17,7 +17,9 @@ Route::get('/buy/{slug}', 'CheckoutController@show')->name('checkout.show');
 Route::get('/bought/{slug}', 'CheckoutController@store')->name('checkout.store');
 
 Route::get('/pages/about', 'PagesController@about')->name('pages.about');
-Route::get('/pages/ask-for-a-template', 'PagesController@askForTemplate')->name('pages.askForTemplate');
+Route::get('/pages/request-a-template', 'PagesController@requestATemplate')->name('pages.requestATemplate');
 Route::get('/pages/contact', 'PagesController@contact')->name('pages.contact');
 Route::get('/pages/terms', 'PagesController@terms')->name('pages.terms');
 
+Route::post('request', 'RequestController@store')->name('request.store');
+Route::post('contact', 'ContactController@store')->name('contact.store');

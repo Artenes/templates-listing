@@ -32,13 +32,13 @@
                     <a class="nav-item {{ Request::is('/') ? 'is-active' : '' }}" href="{{ route('templates.index') }}">
                         Templates
                     </a>
-                    <a class="nav-item" href="{{ route('pages.about') }}">
+                    <a class="nav-item {{ Request::is('pages/about') ? 'is-active' : '' }}" href="{{ route('pages.about') }}">
                         About
                     </a>
-                    <a class="nav-item" href="{{ route('pages.askForTemplate') }}">
-                        Ask for a template
+                    <a class="nav-item {{ Request::is('pages/request-a-template') ? 'is-active' : '' }}" href="{{ route('pages.requestATemplate') }}">
+                        Request a template
                     </a>
-                    <a class="nav-item" href="{{ route('pages.contact') }}">
+                    <a class="nav-item {{ Request::is('pages/contact') ? 'is-active' : '' }}" href="{{ route('pages.contact') }}">
                         Contact
                     </a>
                 </div>
@@ -50,21 +50,22 @@
 
 </section>
 
+@if(session()->has('status'))
+    <div class="notification is-success">
+        {{ session()->get('status') }}
+    </div>
+@endif
+
 @yield('body')
 
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
-            <p>
-                <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            <p class="has-text-white">
+                <strong class="has-text-white">XipGate</strong> all rights reserved. Copyright {{ date('Y') }}.
+                <a href="http://opensource.org/licenses/mit-license.php">Terms and conditions</a>.
             </p>
-            <p>
-                <a class="icon" href="https://github.com/jgthms/bulma">
-                    <i class="fa fa-github"></i>
-                </a>
-            </p>
+            <p><a href="mailto:contact@xipgate.com">contact@xipgate.com</a></p>
         </div>
     </div>
 </footer>
