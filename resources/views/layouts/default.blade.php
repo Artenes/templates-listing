@@ -15,6 +15,37 @@
 
 <section class="hero is-primary is-medium">
 
+    <div class="hero-head">
+        <header class="nav">
+            <div class="container">
+                <div class="nav-left">
+                    <a class="nav-item logo" href="/">
+                        XipGate
+                    </a>
+                </div>
+                <span class="nav-toggle">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                <div class="nav-right nav-menu">
+                    <a class="nav-item {{ Request::is('/') ? 'is-active' : '' }}" href="{{ route('templates.index') }}">
+                        Templates
+                    </a>
+                    <a class="nav-item" href="{{ route('pages.about') }}">
+                        About
+                    </a>
+                    <a class="nav-item" href="{{ route('pages.askForTemplate') }}">
+                        Ask for a template
+                    </a>
+                    <a class="nav-item" href="{{ route('pages.contact') }}">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
     @yield('hero-body')
 
 </section>

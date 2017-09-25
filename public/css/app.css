@@ -5,7 +5,7 @@
 html, body {
 
     font-family: Quicksand, 'sans-serif';
-    background-color: #00c053;
+    background-color: #fdfdfd;
     font-size: 1em;
     height: 99%;
     padding-bottom: 1em;
@@ -14,8 +14,7 @@ html, body {
 
 .card {
 
-    border-radius: 1em;
-    box-shadow: 5px 5px #007934;
+    box-shadow: 0px 5px 6px #f1f1f1;
 
 }
 
@@ -43,11 +42,25 @@ html, body {
 
 }
 
+.template-title h2 {
+
+    font-weight: bold;
+    font-size: 1.5em;
+
+}
+
 .template-title {
 
+    font-weight: 500;
     text-transform: lowercase;
-    text-align: center;
-    display: inline-block;
+
+}
+
+.template-title p {
+
+    font-size: 0.9em;
+    font-weight: 100;
+    text-transform: lowercase;
 
 }
 
@@ -79,12 +92,19 @@ html, body {
 
 .navbar {
 
+    background-color: #212121;
+    box-shadow: black 0px 5px;
+
+}
+
+.navbar.theme-details {
+
     position: fixed !important;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
-    background-color: #00c053;
+    background-color: #212121;
 
 }
 
@@ -97,8 +117,8 @@ html, body {
 .logo {
 
     font-family: 'Wendy One', sans-serif;
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 1em;
+    font-weight: 400;
 
 }
 
@@ -106,7 +126,6 @@ html, body {
 
     font-family: 'Wendy One', sans-serif;
     font-size: 1em;
-    font-weight: 500;
 
 }
 
@@ -118,9 +137,8 @@ html, body {
 
 .theme-details .name {
 
-    font-weight: bold;
+    font-weight: 100;
     font-size: 1em;
-    border-right: dashed white 1px;
 
 }
 
@@ -150,8 +168,7 @@ html, body {
 
 .theme-details .price a {
 
-    font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 200;
 
 }
 
@@ -190,5 +207,99 @@ a.footer-item {
 .search-field {
 
     margin-bottom: 2em !important;
+
+}
+
+.hero-head {
+
+    background-color: #212121;
+    box-shadow: 0px 5px 6px black;
+    z-index: 1;
+
+}
+
+.hero-body {
+
+    background-color: #212121;
+
+}
+
+.footer {
+
+    background-color: #212121;
+
+}
+
+.custom-pagination {
+
+    text-align: center;
+
+}
+
+.search {
+
+    width: 100%;
+    margin-bottom: 2em;
+    border: solid 1px #f1f1f1;
+    border-radius: 1em;
+    padding: 0.8em;
+    text-align: center;
+
+}
+
+.main-title {
+
+    margin-bottom: 2em !important;
+
+}
+
+.with-black-pattern {
+
+    background-image: url("/img/dark-wood.jpg");
+
+}
+
+.with-white-pattern {
+
+    background-image: url("/img/white.jpg");
+
+}
+
+.pull-bottom {
+
+    vertical-align: bottom;
+
+}
+
+.price {
+
+    font-size: 2em !important;
+    font-weight: bold;
+    margin-left: 1px;
+
+}
+
+.has-shadow {
+
+    box-shadow: 0px 5px 6px black;
+
+}
+
+.is-small {
+
+    text-transform: lowercase;
+
+}
+
+.header-buy {
+
+    padding: 4em;
+    margin-bottom: 0 !important;
+
+}
+
+.header-buy h1, .header-buy h2 {
+
+    color: white;
 
 }

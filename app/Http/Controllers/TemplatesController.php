@@ -8,10 +8,17 @@ use Illuminate\Http\Request;
 class TemplatesController extends Controller
 {
 
-    public function index()
+    public function showIndex()
     {
 
-        return view('templates.index', ['templates' => Template::all()]);
+        return view('templates.index');
+
+    }
+
+    public function index(Request $request)
+    {
+
+        return response()->json(Template::search($request->get('s', '')));
 
     }
 
