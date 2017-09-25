@@ -65,7 +65,6 @@
                 <strong class="has-text-white">XipGate</strong> all rights reserved. Copyright {{ date('Y') }}.
                 <a href="http://opensource.org/licenses/mit-license.php">Terms and conditions</a>.
             </p>
-            <p><a href="mailto:contact@xipgate.com">contact@xipgate.com</a></p>
         </div>
     </div>
 </footer>

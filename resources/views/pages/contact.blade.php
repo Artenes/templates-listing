@@ -30,14 +30,14 @@
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control">
-                            <input class="input" type="email" placeholder="Your email" required>
+                            <input class="input" type="email" placeholder="Your email" name="email" required>
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Message</label>
                         <div class="control">
-                            <textarea class="textarea" placeholder="Your message here" required></textarea>
+                            <textarea class="textarea" placeholder="Your message here" name="message" required></textarea>
                         </div>
                     </div>
 

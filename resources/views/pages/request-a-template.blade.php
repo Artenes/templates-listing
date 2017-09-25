@@ -30,14 +30,14 @@
                     <div class="field">
                         <label class="label">Email</label>
                         <div class="control">
-                            <input class="input" type="email" placeholder="Your email" required>
+                            <input class="input" type="email" placeholder="Your email" name="email" required>
                         </div>
                     </div>
 
                     <div class="field">
-                        <label class="label">Template name or url (in case you saw in some other site)</label>
+                        <label class="label">Template name or url</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="The template name or url" required>
+                            <input class="input" type="text" placeholder="The template name or url" name="template" required>
                         </div>
                     </div>
 
