@@ -15,4 +15,13 @@ class CheckoutController extends Controller
 
     }
 
+    public function store($slug)
+    {
+
+        $template = Template::findOrFailBySlug($slug);
+
+        return view('checkout.buy', ['template' => $template]);
+
+    }
+
 }

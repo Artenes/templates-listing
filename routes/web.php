@@ -12,11 +12,12 @@
 */
 
 Route::get('/', 'TemplatesController@showIndex')->name('templates.index');
-Route::get('/template/{slug}', 'TemplatesController@index')->name('templates.show');
-Route::get('/demos/{slug}', 'TemplatesController@show')->name('demos.show');
+Route::get('/demos/{slug}', 'TemplatesController@demo')->name('demos.show');
 Route::get('/buy/{slug}', 'CheckoutController@show')->name('checkout.show');
+Route::get('/bought/{slug}', 'CheckoutController@store')->name('checkout.store');
 
 Route::get('/pages/about', 'PagesController@about')->name('pages.about');
 Route::get('/pages/ask-for-a-template', 'PagesController@askForTemplate')->name('pages.askForTemplate');
 Route::get('/pages/contact', 'PagesController@contact')->name('pages.contact');
+Route::get('/pages/terms', 'PagesController@terms')->name('pages.terms');
 

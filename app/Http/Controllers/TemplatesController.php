@@ -22,10 +22,21 @@ class TemplatesController extends Controller
 
     }
 
-    public function show($slug)
+    public function demo($slug)
     {
 
         return view('templates.show', ['template' => Template::findOrFailBySlug($slug)]);
+
+    }
+
+    public function show($slug)
+    {
+
+        return response()->json([
+
+            'template' => Template::findOrFailBySlug($slug)->toArray(),
+
+        ]);
 
     }
 

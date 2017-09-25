@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/templates', 'TemplatesController@index');
+Route::get('/templates/{slug}', 'TemplatesController@show');

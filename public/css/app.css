@@ -303,3 +303,24 @@ a.footer-item {
     color: white;
 
 }
+
+.has-space {
+
+    margin-bottom: 2em
+
+}
+
+.round-image {
+
+    border-radius: 50%;
+
+}
+
+.call-to-action {
+
+    padding: 3em;
+    border: solid black 1px;
+    border-radius: 1em;
+
+
+}
