@@ -72,7 +72,7 @@ return [
         'name' => 'Flatsome',
         'original_source_url' => 'https://themeforest.net/item/flatsome-multipurpose-responsive-woocommerce-theme/5484319',
         'source_url' => 'https://www.astronautatemplates.com.br/produto/template-woocommerce-para-lojas-virtuais-wordpress-flatsome/',
-        'demo_url' => '',
+        'demo_url' => 'http://flatsome3.uxthemes.com/',
         'price_dollar' => 59,
         'price_real' => 33,
         'title' => 'Multi-Purpose Responsive WooCommerce Theme',
