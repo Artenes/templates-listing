@@ -28,4 +28,11 @@ class PagesController extends Controller
 
     }
 
+    public function terms()
+    {
+
+        return view('pages.terms');
+
+    }
+
 }

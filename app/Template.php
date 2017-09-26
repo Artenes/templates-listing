@@ -16,7 +16,7 @@ class Template extends Model
         return static::where('name', 'like', "%{$search}%")
             ->orWhere('title', 'like', "%{$search}%")
             ->orWhere('tags', 'like', "%{$search}%")
-            ->paginate()->toArray();
+            ->paginate(9)->toArray();
 
     }
 
@@ -44,7 +44,7 @@ class Template extends Model
     public function getPriceAttribute()
     {
 
-        return Price::calculate($this->price_real);
+        return Price::calculate($this->price_real, $this->price_dollar);
 
     }
 

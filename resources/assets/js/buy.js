@@ -7,21 +7,23 @@ function renderPayPalButton(template, elementId, style) {
 
     paypal.Button.render({
 
-        env: 'sandbox',
-        //env: 'production',
+        //env: 'sandbox',
+        env: 'production',
 
         locale: 'en_US',
 
         style: style,
 
         client: {
-            sandbox: 'AW6EpvYk6hhs3_enZoTUIXSJLBkk2I3LD9R6gYq5DzlkyBGFP0lR48wTqxl81EReQR2wlgY-EhkyUaK5'
-            //production: 'xxxxxxxxx'
+            //sandbox: 'AW6EpvYk6hhs3_enZoTUIXSJLBkk2I3LD9R6gYq5DzlkyBGFP0lR48wTqxl81EReQR2wlgY-EhkyUaK5'
+            production: 'AZTvLHkmehV73A7OAqE6Y91IsKjZ0b7G8kdFNaX6wXWJGkibBR-Q_CJqqo2j-vxc2pfHFs6NTn_0wV1S'
         },
 
         commit: true,
 
         payment: function (data, actions) {
+
+            const templateDescription = template.title + " (" + template.name + ")";
 
             return actions.payment.create({
 
@@ -32,7 +34,7 @@ function renderPayPalButton(template, elementId, style) {
                         {
 
                             amount: {total: template.price, currency: 'USD'},
-                            description: template.title + " (" + template.name + ")"
+                            description: templateDescription
 
 
                         }
@@ -41,6 +43,12 @@ function renderPayPalButton(template, elementId, style) {
 
                     note_to_payer: "Don't forget, it will take up to 2 business days for your product to be sent to your email!.",
 
+                },
+
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
                 }
 
             });

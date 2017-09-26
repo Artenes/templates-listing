@@ -16,17 +16,21 @@ class PriceCalculator extends Model
 
     }
 
-    public function calculate($priceInReais)
+    public function calculate($priceInReais, $priceInDollars)
     {
 
         $price = $priceInReais / $this->config['exchange'];
 
         $taxTransaction = $price * ($this->config['paypal_tax_percentage'] / 100);
-        $tazExchange = $price * ($this->config['paypal_tax_exchange'] / 100);
+        $taxExchange = $price * ($this->config['paypal_tax_exchange'] / 100);
 
-        $total = $price + $taxTransaction + $tazExchange + $this->config['paypal_tax_fixed'];
+        $total = $price + $taxTransaction + $taxExchange + $this->config['paypal_tax_fixed'];
 
-        $gain = $total * ($this->config['gain_percentage'] / 100);
+        $isTotalGreaterThan50Percent = $total >= ($priceInDollars * 0.5);
+
+        $percentage =  $isTotalGreaterThan50Percent ? $this->config['low_gain_percentage'] : $this->config['gain_percentage'];
+
+        $gain = $total * ($percentage / 100);
 
         return ceil($total + $gain);
 

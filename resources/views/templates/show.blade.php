@@ -1,5 +1,9 @@
 @extends('layouts.html')
 
+@section('title')
+    {{ $template->name }} - {{ $template->title }}
+@endsection
+
 @section('body')
 
     <nav class="navbar theme-details" role="navigation">

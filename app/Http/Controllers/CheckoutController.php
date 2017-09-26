@@ -20,7 +20,7 @@ class CheckoutController extends Controller
 
         $template = Template::findOrFailBySlug($slug);
 
-        return view('checkout.buy', ['template' => $template]);
+        return view('checkout.bought', ['template' => $template]);
 
     }
 

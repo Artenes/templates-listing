@@ -17,7 +17,8 @@ class CreateTemplatesTable extends Migration
             $table->increments('id');
             $table->uuid('uuid');
             $table->string('thumbnail');
-            $table->string('slug');
+            $table->string('cover');
+            $table->string('slug')->unique();
             $table->string('title');
             $table->string('name');
             $table->text('description')->nullable();

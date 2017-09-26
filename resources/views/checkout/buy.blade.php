@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('title')
+    Buy {{ $template->name }} - {{ $template->title }}
+@endsection
+
 @section('body')
 
     <div class="columns with-black-pattern header-buy">
@@ -28,8 +32,8 @@
             <div class="column is-offset-1 is-10">
 
                 <a href="{{ $template->demo }}" target="_blank">
-                    <figure class="image is-4by3 has-shadow has-space">
-                        <img src="{{ $template->thumbnail }}" title="See demo of {{$template->name}}">
+                    <figure class="image is-2by1 has-shadow has-space">
+                        <img src="{{ $template->cover }}" title="See demo of {{$template->name}}">
                     </figure>
                 </a>
 

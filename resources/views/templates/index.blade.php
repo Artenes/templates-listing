@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('title')
+   Cheapeast Wordpress templates on the internet
+@endsection
+
 @section('hero-body')
 
     <div class="hero-body with-black-pattern">

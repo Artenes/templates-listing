@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('title')
+    About
+@endsection
+
 @section('hero-body')
 
     <div class="hero-body with-black-pattern">

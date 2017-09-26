@@ -306,7 +306,7 @@ a.footer-item {
 
 .has-space {
 
-    margin-bottom: 2em
+    margin-bottom: 2em !important;
 
 }
 

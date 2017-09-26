@@ -72,7 +72,7 @@
         <h3 class="subtitle has-text-weight-bold has-text-centered">License</h3>
 
         <p class="has-text-centered">Our vendors provide the templates under the <i>GPL license</i>. Checkout our
-            <a href="{{ route('pages.terms') }}" target="_blank">terms and conditions page</a> for more information.</p>
+            <a href="{{ route('pages.terms') }}">terms and conditions page</a> for more information.</p>
 
     </div>
 

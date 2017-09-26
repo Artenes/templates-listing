@@ -8,7 +8,8 @@
             </div>
             <div class="column is-half">
                 <div class="control" v-bind:class="{'is-loading': busy}">
-                    <input type="text" class="search" placeholder="type here to search for templates" v-model="search" autofocus>
+                    <input type="text" class="search" placeholder="type here to search for templates" v-model="search"
+                           autofocus>
                 </div>
             </div>
             <div class="column is-one-quarter">
@@ -16,7 +17,7 @@
             </div>
         </div>
 
-        <div class="columns" v-for="templates in chunkTemplates">
+        <div class="columns" v-for="templates in chunkTemplates" v-show="!busy">
 
             <div class="column is-4" v-for="template in templates">
 
@@ -24,7 +25,7 @@
 
                     <div class="card-image">
                         <a :href="template.demo" target="_blank">
-                            <figure class="image is-4by3">
+                            <figure class="image is-2by1">
                                 <img :src="template.thumbnail" alt="Image">
                             </figure>
                         </a>
@@ -52,9 +53,30 @@
 
         </div>
 
+        <div v-show="!hasTemplates && !busy" class="has-text-centered">
+
+            <h2 class="title">No templates found</h2>
+
+            <h3 class="subtitle">
+                But don't worry, just request a template and we will get it for you from our vendors!</h3>
+
+            <p><a href="/pages/request-a-template" class="button is-black is-outlined">Request template</a></p>
+
+        </div>
+
+        <div v-show="busy" class="has-text-centered">
+
+            <img src="/img/loading.gif" alt="Loading...">
+
+        </div>
+
         <nav class="custom-pagination" role="navigation" v-show="showPagination">
-            <button class="button is-dark is-outlined" :disabled="!hasPrevious" v-bind:class="{'is-loading': busy}">Previous</button>
-            <button class="button is-dark is-outlined" :disabled="!hasNext" v-bind:class="{'is-loading': busy}">Next page</button>
+            <button class="button is-dark is-outlined" :disabled="!hasPrevious" v-bind:class="{'is-loading': busy}"
+                    @click="previousPage">Previous
+            </button>
+            <button class="button is-dark is-outlined" :disabled="!hasNext" v-bind:class="{'is-loading': busy}"
+                    @click="nextPage">Next page
+            </button>
         </nav>
 
     </div>
@@ -72,7 +94,8 @@
                 templates: [],
                 pagination: {
                     next_page_url: null,
-                    prev_page_url: null
+                    prev_page_url: null,
+                    current_page: 1
                 },
                 search: '',
                 timeout: null,
@@ -116,6 +139,12 @@
 
             },
 
+            hasTemplates() {
+
+                return this.templates.length > 0;
+
+            },
+
             showPagination() {
 
                 return this.hasNext || this.hasPrevious;
@@ -141,11 +170,29 @@
 
         methods: {
 
-            searchTemplates(value = '') {
+            nextPage() {
+
+                if (!this.hasNext)
+                    return;
+
+                this.searchTemplates(this.search, this.pagination.current_page + 1);
+
+            },
+
+            previousPage() {
+
+                if (!this.hasPrevious)
+                    return;
+
+                this.searchTemplates(this.search, this.pagination.current_page - 1);
+
+            },
+
+            searchTemplates(value = '', page = 1) {
 
                 this.busy = true;
 
-                axios.get('/api/templates?s=' + value).then(function (response) {
+                axios.get('/api/templates?s=' + value + '&page=' + page).then(function (response) {
 
                     this.templates = response.data.data;
                     this.pagination = response.data;
