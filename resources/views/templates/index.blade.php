@@ -9,7 +9,7 @@
     <div class="hero-body with-black-pattern">
         <div class="container has-text-centered">
             <h1 class="title main-title">
-                The chepeast premium templates on the internet
+                The cheapest premium templates on the internet
             </h1>
             <h2 class="subtitle">
                 premium templates for less than half the price of other stores
